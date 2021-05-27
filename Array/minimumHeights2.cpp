@@ -8,13 +8,12 @@ int getMinDiff(int arr[], int n, int k) {
         
         for(int i=1;i<n;i++)
         {
-            if(arr[i]>=k)
-            {
                 max_ele = max(arr[n-1]-k, arr[i-1]+k);
                 min_ele = min(arr[0]+k, arr[i]-k);
                 
+                if(min_ele<0) continue; //cause then result would increase but we have to minimise it
+                
                 result = min(result, max_ele - min_ele);
-            }
         }
         
         return result;
