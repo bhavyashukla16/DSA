@@ -7,8 +7,8 @@
     {
         // code here
         // return head of reversed list
-        Node *prev = head;
-        Node *curr = head->next;
+        Node *prev = NULL;
+        Node *curr = head;
         
         while(curr!=NULL)
         {
@@ -17,7 +17,6 @@
             prev = curr;
             curr = temp;
         }
-        head->next = NULL;
         
         return prev;
     }
