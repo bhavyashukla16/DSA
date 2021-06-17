@@ -16,7 +16,7 @@ vector <int> countDistinct (int A[], int n, int k)
         
         v.push_back(count);
         int l=0;
-        for(int i=k;i<n;i++)
+        for(int i=k;i<n;i++) //k = window size
         {
             if(mp[A[l]]==1) //if the elemnt to be removed from the window has occured only once
             {
