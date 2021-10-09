@@ -18,16 +18,24 @@ bool isIdentical(Node *r1, Node *r2)
 
 //METHOD 2: Inorder + Preorder/Postorder identify a tree 
 //TC=O(N) SC=O(1)
-void inOrder(Node* root, string in)
+void inOrder(Node* root, string &in)
     {
-        if(!root) return;
+        if(!root)
+        {
+            in+='N';
+            return;
+        }
         inOrder(root->left, in);
         in+=(char)root->data + 48;
         inOrder(root->right, in);
     }
-    void preOrder(Node* root, string pre)
+    void preOrder(Node* root, string &pre)
     {
-        if(!root) return;
+        if(!root)
+        {
+            pre+='N';
+            return;
+        }
         pre+=(char)root->data + 48;
         preOrder(root->left, pre);
         preOrder(root->right, pre);

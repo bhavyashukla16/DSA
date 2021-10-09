@@ -25,3 +25,35 @@ bool isSymmetric(struct Node* root)
 
 //Method 3: using queue
 //https://www.cdn.geeksforgeeks.org/check-symmetric-binary-tree-iterative-approach/
+bool isSymmetric(TreeNode* root) {
+        if(root==NULL)
+            return true;
+        queue<TreeNode*> qu;
+        q.push(root);
+        q.push(root);
+        TreeNode *leftNode, *rightNode;
+        while(!q.empty())
+        {
+            leftNode=q.front();
+            q.pop();
+            rightNode=q.front();
+            q.pop();
+            if(leftNode->val != rightNode->val)
+                return false;
+            if(leftNode->left && rightNode->right) //if both r present
+            {
+                q.push(leftNode->left);
+                q.push(rightNode->right);
+            }
+            else if(leftNode->left || rightNode->right) //if one of them is NULL
+                return false;
+            if(leftNode->right && rightNode->left) 
+            {
+                q.push(leftNode->right);
+                q.push(rightNode->left);
+            }
+            else if(leftNode->right || rightNode->left)
+                return false;
+        }
+        return true;
+    }

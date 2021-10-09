@@ -17,11 +17,11 @@ int height(struct Node* node){
         queue<Node*> q;
         q.push(node);
         int height=0;
-        while(1)
+        while(!q.empty()) //while(1)
         {
             int nodeCountInOneLevel=q.size();
-            if(nodeCountInOneLevel==0) 
-            return height;
+            //if(nodeCountInOneLevel==0) 
+            //return height;
             
             height++;
             
