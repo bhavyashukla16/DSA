@@ -11,14 +11,14 @@ int height(Node* root)
         if(!root) return 0;
         return max(height(root->left), height(root->right)) + 1;
     }
-    int diameter(Node* root) {
-        // Your code here
-        if(!root) return 0;
-        int lheight = height(root->left);
-        int rheight = height(root->right);
-        
-        int ldiameter = diameter(root->left);
-        int rdiameter = diameter(root->right);
-        
-        return max(lheight+ rheight +1, max(ldiameter, rdiameter));
-    }
+int diameter(Node* root) {
+    // Your code here
+    if(!root) return 0;
+    int lheight = height(root->left);
+    int rheight = height(root->right);
+    
+    int ldiameter = diameter(root->left);
+    int rdiameter = diameter(root->right);
+    
+    return max(lheight+ rheight +1, max(ldiameter, rdiameter));
+}

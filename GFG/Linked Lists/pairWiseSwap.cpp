@@ -13,7 +13,7 @@ public:
         Node *prev=head, *curr=head->next;
         Node *temp = head->next->next;
         curr->next = prev;
-        if(prev!=NULL)
+        
         prev->next = pairWiseSwap(temp);
         
         return curr;

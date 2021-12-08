@@ -32,7 +32,7 @@ void verticalOrder(Node *root)
 }
 
 //METHOD 2: using Hash Table to store all the nodes at a particular Horizontal distance(HD)
-//TC=O(N) SC=O(N)
+//TC=O(N*height) SC=O(N)
 void setHD(Node* root, int hd, map<int, vector<int>> &mp)
     {
         if(!root) return;

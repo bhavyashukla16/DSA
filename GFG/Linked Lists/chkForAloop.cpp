@@ -1,7 +1,7 @@
 //https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1
 
 //METHOD 1:
-// if any node points to NULL or a address of any previous node, it has a LOOP
+// if any node points to an address of any previous node, it has a LOOP
 
 bool detectLoop(Node* head)
     {
@@ -23,7 +23,7 @@ bool detectLoop(Node* head)
 // if slow and fast pointer becomes equal at any point, it has a LOOP
 /* with every iteration, the distance between the slow and fast pointers increases by 1 
 suppose the initial distance is k then it becomes k+1 then k+2 n so on, 
-they r bound to meet when distance becomes n i.e. the no. of loops in the cycle*/
+they r bound to meet when distance becomes n i.e. the no. of nodes in the cycle*/
 bool detectLoop(Node* head)
     {
         // your code here

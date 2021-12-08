@@ -20,7 +20,7 @@ void bfs(int v, vector<int> adj[], bool vis[], vector<int> &ans)
 	            if(vis[child]==0)
 	            {
 	                vis[child] = true;
-	                q.push(adj[temp][i]);
+	                q.push(child);
 	            }
 	        }
 	    }
