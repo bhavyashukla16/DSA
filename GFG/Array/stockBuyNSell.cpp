@@ -1,6 +1,6 @@
 //https://practice.geeksforgeeks.org/problems/stock-buy-and-sell-1587115621/1#
 
-//Method 1: Keeping a track of maximum difference bet prices
+//Method 1: Keeping a track of maximum difference b/w prices
 //TC = O(N)
  vector<vector<int> > stockBuySell(vector<int> A, int n){
         // code here

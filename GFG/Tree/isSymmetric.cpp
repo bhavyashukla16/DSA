@@ -28,7 +28,7 @@ bool isSymmetric(struct Node* root)
 bool isSymmetric(TreeNode* root) {
         if(root==NULL)
             return true;
-        queue<TreeNode*> qu;
+        queue<TreeNode*> q;
         q.push(root);
         q.push(root);
         TreeNode *leftNode, *rightNode;

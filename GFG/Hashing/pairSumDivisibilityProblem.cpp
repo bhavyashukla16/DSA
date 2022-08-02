@@ -16,18 +16,7 @@ bool canPair(vector<int> nums, int k) {
         for(int i=0;i<n;i++)
         {
             rem = (nums[i]%k + k) % k;
-            if(rem*2 == k)
-            {
-                if(mp[rem]&1) //they have to be even to pair up among themselves
-                return false;
-                else
-                {
-                    c+=mp[rem]/2;
-                    mp[rem]=0;
-                }
-            }
-            
-            else if(rem == 0)
+            if(rem*2 == k || rem == 0)
             {
                 if(mp[rem]&1) //they have to be even to pair up among themselves
                 return false;

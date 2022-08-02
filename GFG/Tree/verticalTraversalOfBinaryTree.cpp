@@ -3,7 +3,7 @@
 //METHOD 1: 1) Find the max n min horizontal distance w.r.t root in a binary tree
 //          2) Run a loop from min to max value of hd n print all nodes having same hd
 //TC=O(N^2) SC=O(1)
-findMinMax(root, min, max, hd)
+void findMinMax(root, min, max, hd)
     if(!root) return;
     if(hd < *min)
     *min = hd;
@@ -13,7 +13,7 @@ findMinMax(root, min, max, hd)
     findMinMax(root->left, min, max, hd-1);
     findMinMax(root->root, min, max, hd+1);
 
-printVerticalLine(root, line_no, hd)
+void printVerticalLine(root, line_no, hd)
     if(!root) return;
     if(hd == line_no)
     cout<<root->data;

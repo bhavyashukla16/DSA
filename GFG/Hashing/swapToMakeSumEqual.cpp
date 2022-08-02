@@ -67,7 +67,7 @@ int findSwapValues(int A[], int n, int B[], int m)
         return -1;
 	}
 
-//METHOD 3: Hash the first array then lopp through the 2nd array n search for B[i]+k in the hash
+//METHOD 3: Hash the first array then loop through the 2nd array n search for B[i]+k in the hash
 //k = (sum1-sum2)/2
 //TC = O(N+M) FASTEST
 int findSwapValues(int A[], int n, int B[], int m)

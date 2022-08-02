@@ -1,6 +1,6 @@
 //https://practice.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
 
-//TC=O(N SC=O(N))
+//TC=O(N) SC=O(N)
 ll findSubarray(vector<ll> arr, int n ) {
         //code here
         ll c=0;

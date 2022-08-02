@@ -38,7 +38,7 @@ int intersection(int a[], int n, int b[], int m) {
         for(int i=0;i<m;i++)
         mp.insert({b[i], i}); //also used
         
-        return n+m-mp.size(); // for count
+        return n+m-mp.size(); // for count //WRONG Eg- 1 2 2 and 1 3
 
         // for printing elements
         for(int i=0;i<n;i++)

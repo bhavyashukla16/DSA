@@ -21,8 +21,13 @@ void rearrange(long long *arr, int n)
     	}
     }
 
-//METHOD 1: using O(1) extra space
+//METHOD 2: without using extra space
 //TC=O(N) SC=O(1)
+// The purpose of this expression is to store two elements at index arr[i]. 
+// arr[max_index] is stored as multiplier and "arr[i]" is stored as remainder. 
+// For example in {1 2 3 4 5 6 7 8 9}, max_element is 10 and we store 91 at index 0. With 91, 
+// we can get original element as 91%10 and new element as 91/10.
+
 void rearrange(long long *arr, int n) 
     { 
     	// Your code here
@@ -33,7 +38,7 @@ void rearrange(long long *arr, int n)
     	    if(i&1)
     	    {
     	        arr[i]+=(arr[min_index] % max_ele) * max_ele;
-    	        min_index++; //traversing starting ele as the array is sorted
+    	        min_index++; //traversing elements from start as the array is sorted
     	    }
     	    else
     	    {

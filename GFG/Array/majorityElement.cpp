@@ -4,7 +4,7 @@
 //METHOD 1: Moore's Voting algorithm (BEST APPROACH)
 // TC=O(N) SC=O(1)
 //based on cancellation principle, everytime we cancel a supposed majority ele with the next ele so the ele in maj_ele gives us 
-//a possible candidate for the majority element then we verify by traversing the array again)
+//a possible candidate for the majority element then we verify by traversing the array again
 int findCandidate(int a[], int size)
     {
         int maj_ele=a[0], count=1;
